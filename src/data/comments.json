@@ -1,0 +1,30 @@
+[
+    {
+        "id": 5,
+        "nickname": "Khyn",
+        "message": "Trop fun ce site",
+        "publishTime": "2024-04-21T18:25:49.662Z",
+        "story_id": 1
+    },
+    {
+        "id": 6,
+        "nickname": "Jako",
+        "message": "Je paie ma tournée !",
+        "publishTime": "2024-04-21T18:26:37.864Z",
+        "story_id": 1
+    },
+    {
+        "id": 7,
+        "nickname": "Sandrine",
+        "message": "T'as trop raison !",
+        "publishTime": "2024-04-21T18:26:53.962Z",
+        "story_id": 2
+    },
+    {
+        "id": 4,
+        "nickname": "Gregory",
+        "message": "ça va tranquille le voyage",
+        "publishTime": "2024-04-22T07:06:28.857Z",
+        "story_id": 1
+    }
+]

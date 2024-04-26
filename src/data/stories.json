@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "Mon premier voyage",
+        "content": "C'était trop bien je me remets de mes émotions et je finis l'article",
+        "publishTime": "2024-04-21T12:48:00.846Z",
+        "author": "Admin",
+        "img_src": "kebab-paysage.webp"
+    },
+    {
+        "id": 2,
+        "title": "Voyage en Asie",
+        "content": "Je suis parti en Asie et c'était trop bien",
+        "publishTime": "2024-04-21T18:26:48.110Z",
+        "author": "Admin",
+        "img_src": "kebab-paysage.webp"
+    }
+]

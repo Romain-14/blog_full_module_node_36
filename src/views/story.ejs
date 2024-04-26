@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/style/index.css" />
+		<title><%= title %></title>
+	</head>
+	<body>
+		<header>
+			<h1>My Blog</h1>
+			<nav>
+				<a href="/">Accueil</a>
+				<a href="/admin">Admin</a>
+			</nav>
+		</header>
+
+		<main>
+			<article>
+				<h2><%= story.title %></h2>
+				<p><%= story.content %></p>
+				<p>
+					Publié le <%= new
+					Date(story.publishTime).toLocaleDateString() %> à <%= new
+					Date(story.publishTime).toLocaleTimeString() %>
+				</p>
+				<p>Par <%= story.author %></p>
+				<img
+					src="/images/<%= story.img_src %>"
+					alt="<%= story.title %>"
+				/>
+			</article>
+
+			<aside>
+				<h3>Commentaires</h3>
+
+                    <form action="/story/<%= story.id %>/comment" method="post">
+                        <input type="text" name="nickname" placeholder="Votre nom" required>
+                        <textarea name="message" placeholder="Votre commentaire" required></textarea>
+                        <button type="submit">Envoyer</button>
+                    </form>
+				
+					<% if (comments.length) { %>
+                        <% for(const comment of comments ) { %>
+                            <hr>
+                            <article>
+                                <p><%= comment.message %></p>
+                                <p>Par <%= comment.nickname %></p>
+                                <p>
+                                    Le <%= new
+                                    Date(comment.publishTime).toLocaleDateString() %> à
+                                    <%= new
+                                    Date(comment.publishTime).toLocaleTimeString() %>
+                                </p>
+                            </article>
+                 
+					<% } %>
+                        <% } else {%>
+
+					    <p>Aucun commentaire pour le moment</p>
+					<% } %>
+				</ul>
+			</aside>
+		</main>
+
+		<a href="/">Retour à l'accueil</a>
+		<footer>
+			<p>© 2024 - Romain Fournier - My blog</p>
+			<p>
+				Photo de
+				<a
+					href="https://unsplash.com/fr/@illiyapresents?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+					>Illiya Vjestica</a
+				>
+				sur
+				<a
+					href="https://unsplash.com/fr/photos/troupeau-de-moutons-sur-un-champ-dherbe-verte-pendant-la-journee-W5FdAcHp7l8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+					>Unsplash</a
+				>
+			</p>
+		</footer>
+	</body>
+</html>
